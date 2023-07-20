@@ -21,28 +21,26 @@ if(numero%2 == 0){
 }
 
 if(typeof(nome) == "boolean"){
-    console.log("É divisível por 2");
+    console.log("É boleano");
 }else if(typeof(nome) == "number"){
-    console.log("É divisível por 3");
+    console.log("É número");
 }else if(typeof(nome) == "string"){
-    console.log("É divisível por 5");
+    console.log("É string");
 }else{
     console.log("Sua variavel é indefinida");
 }
 
 if(numero>0){
-    console.log("É positvo");
     if(numero%2 == 0){
-        console.log("e par");
+        console.log("É positivo e par");
     }else{
-        console.log("e ímpar");
+        console.log("É positivo e ímpar");
     }
 }else if(numero<0){
-    console.log("É negativo");
     if(numero%2 == 0){
-        console.log("e par");
+        console.log("É negativo e par");
     }else{
-        console.log("e ímpar");
+        console.log("É negativo e ímpar");
     }
 }else{
     console.log("Seu número é 0")
