@@ -1,6 +1,6 @@
-let numero = 12;
-let nome = "";
-let boleano = true;
+let numero = -7;
+let nome = "Weslley";
+let boleano = 5;
 
 if(numero>0){
     console.log("é positvo");
@@ -24,10 +24,12 @@ if(numero > 10){
     console.log("é maior que 10");
 }else{
     numero*=2;
+    console.log(numero);
 }
 
 if(typeof(boleano)=="boolean"){
     console.log("é boleano");
 }else{
     boleano = false;
+    console.log(boleano);
 }
