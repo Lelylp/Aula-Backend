@@ -32,3 +32,6 @@ function divisao(a, b){
 }
 
 console.log(divisao(10,2));
+/*console.log(nome);
+const nome = "Weslley";
+nome = "Biel";*/
