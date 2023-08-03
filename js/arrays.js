@@ -4,7 +4,7 @@ console.log(segundoElemento);
 
 const frutas = ['maça', 'banana', 'laranja', 'uva', 'manga'];
 frutas.push('pera');
-frutas.splice(0,1)
+frutas.splice(0,4)
 console.log(frutas);
 
 const numeros = [10, 20, 30, 40, 50];
