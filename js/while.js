@@ -34,10 +34,20 @@ console.log(num);
 
 //quest 5
 num = require('readline-sync').questionInt("Digite um número: ");
-if ((num == 2 || num == 3 || num == 5) || (num%2 !== 0 && num%3 !== 0 && num%5 !==0)) {
-    console.log("Seu número é um número primo");
-}else {
-    console.log("Seu número não é um número primo");
+let cos = num;
+let count = 0;
+do {
+    if(num%cos == 0){
+        count++;
+        cos--;
+    }else{
+        cos--;
+    }
+} while (cos>=0);
+if (count == 2) {
+    console.log("Seu número é primo");
+} else {
+    console.log("Seu número nao é primo");
 }
 
 //quest 6
