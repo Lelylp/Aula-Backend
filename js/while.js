@@ -40,9 +40,13 @@ do {
     if(num%cos == 0){
         count++;
         cos--;
+        if(count == 3){
+            break;
+        }
     }else{
         cos--;
     }
+
 } while (cos>=0);
 if (count == 2) {
     console.log("Seu número é primo");
