@@ -1,5 +1,5 @@
 //quest 1
-/*let num = 1;
+let num = 1;
 while (num<=10) {
     console.log(num);
     num++;
@@ -31,17 +31,15 @@ while (num<1000) {
     num *= 2;
 }
 console.log(num);
-*/
+
 //quest 5
 num = require('readline-sync').questionInt("Digite um número: ");
-if (num == 2 || num == 3) {
+if ((num == 2 || num == 3) || (num%2 !== 0 && num%3 !== 0 && num%5 !==0)) {
     console.log("Seu número é um número primo");
-} else if (num%2 !== 0 && num%3 !== 0 && num%5 !==0) {
-    console.log("Seu número é um número primo");
-} else {
+}else {
     console.log("Seu número não é um número primo");
 }
-/*
+
 //quest 6
 let senha = 1234;
 while (senha !== pass){
@@ -85,4 +83,4 @@ num = 10;
 while (num >0) {
     console.log(num);
     num--;
-}*/
+}
