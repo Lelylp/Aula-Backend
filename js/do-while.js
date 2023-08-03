@@ -36,7 +36,7 @@ console.log(num);
 num = require('readline-sync').questionInt("Digite um número: ");
 if (num == 2 || num == 3) {
     console.log("Seu número é um número primo");
-} else if (num%2 !== 0 && num%3 !== 0) {
+} else if (num%2 !== 0 && num%3 !== 0 && num%5 !==0) {
     console.log("Seu número é um número primo");
 } else {
     console.log("Seu número não é um número primo");
