@@ -34,7 +34,7 @@ console.log(num);
 
 //quest 5
 num = require('readline-sync').questionInt("Digite um número: ");
-let cos = 0;
+let cos = 1;
 let count = 0;
 do {
     if(num%cos == 0){
