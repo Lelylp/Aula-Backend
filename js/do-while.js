@@ -34,17 +34,17 @@ console.log(num);
 
 //quest 5
 num = require('readline-sync').questionInt("Digite um número: ");
-let cos = num;
+let cos = 0;
 let count = 0;
 do {
     if(num%cos == 0){
         count++;
-        cos--;
+        cos++;
         if(count == 3){
             break;
         }
     }else{
-        cos--;
+        cos++;
     }
 } while (cos>=0);
 if (count == 2) {
