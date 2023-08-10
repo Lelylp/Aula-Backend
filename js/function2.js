@@ -117,6 +117,6 @@ function gerarSenha(tam) {
         let randomI = Math.floor(Math.random() * letras.length);
         senha[i] = (letras[randomI]);
     }
-    return senha;
+    return senha.join('');
 }
 console.log(gerarSenha(10));
