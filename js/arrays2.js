@@ -13,7 +13,7 @@ console.log(numeros1.filter(x => x % 2 === 0));
 //quest 3
 const numeros2 = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
 console.log("Números ordenados");
-console.log(numeros2.sort());
+console.log(numeros2.sort((a,b) => a-b));
 
 //quest 4
 const frutas = ['maçã', 'banana', 'laranja', 'uva', 'manga'];
