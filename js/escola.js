@@ -3,7 +3,8 @@ console.log("========== MENU ==========");
 console.log("0 - Sair do Sistemas");
 console.log("1 - Listar todos os alunos");
 console.log("2 - Cadastrar um novo aluno");
-console.log("3 - Cadastrar um novo aluno");
+console.log("3 - Buscar aluno");
+console.log("4 - Alterar aluno");
 console.log("==========================");
 var matricula = 1
 let loop = true
