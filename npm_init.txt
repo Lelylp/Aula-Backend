@@ -1,0 +1,18 @@
+npm init =>
+{
+  "name": "nova-pasta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",//add
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"//add, npm run start
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",//mudei
+  "dependencies": {
+    "readline-sync": "^1.4.10"//usei o npm install
+  }
+}
