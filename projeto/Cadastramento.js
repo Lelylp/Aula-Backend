@@ -1,9 +1,8 @@
 import Pessoa from "./Pessoa.js";
 import readline from 'readline-sync';
-// let listaPacientes = [];
 // let paciente0 = new Pessoa();
-// console.log(paciente0);
 // let paciente1 = new Pessoa();
+let listaPacientes = [];
 let loop = true;
 
 while (loop) {
