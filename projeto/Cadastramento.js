@@ -1,8 +1,9 @@
 import Pessoa from "./Pessoa.js";
 import readline from 'readline-sync';
-// let paciente0 = new Pessoa();
+ let paciente0 = new Pessoa();
 // let paciente1 = new Pessoa();
 let listaPacientes = [];
+listaPacientes.push(paciente0);
 let loop = true;
 //3 case pra baixo
 
@@ -22,7 +23,7 @@ while (loop) {
       case 1:
         console.log("Listando todos os pacientes");
         console.log("------------------------");
-        for (const p in listaPacientes) {
+        for (const p of listaPacientes) {
             console.log(p);
         }
         console.log("------------------------");
