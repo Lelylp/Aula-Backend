@@ -44,6 +44,7 @@ while (loop) {
         let sexo =readline.question("Digite o sexo:");
         let cep =readline.question("Digite o cep:");
         let email =readline.question("Digite o email:");
+        let paciente;
         if (pergunta == "S" || pergunta == "s") {
             paciente = new Pessoa(nome, nomeS, cpf, nomeMae, tel, dataNasc, etnia, sexo, cep, email);
         }else{
