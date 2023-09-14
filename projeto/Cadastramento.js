@@ -49,9 +49,9 @@ while (loop) {
         break;
       case 3:
         matriculaBusca = readline.questionInt(
-          "Matricula do aluno que deseja buscar: "
+          "Matricula do paciente que deseja buscar: "
         );
-        for (const a of alunos) {
+        for (const a of listaPacientes) {
           if (a.matricula === matriculaBusca) {
             console.log("Resultado da busca");
             console.log("------------------------");
@@ -63,32 +63,32 @@ while (loop) {
         break;
       case 4:
         matriculaBusca = readline.questionInt(
-          "Matricula do aluno que deseja alterar: "
+          "Matricula do paciente que deseja alterar: "
         );
-        for (const a of alunos) {
+        for (const a of listaPacientes) {
           if (a.matricula === matriculaBusca) {
             console.log(a.nome);
-            a.nome = readline.question("Digite o nome do aluno:");
+            a.nome = readline.question("Digite o nome do paciente:");
             for (let i = 0; i < a.notas.length; i++) {
               a.notas[i] = readline.questionFloat(`Digite a nota ${i + 1}: `);
             }
           }
         }
-        console.log("Aluno alterado com sucesso!");
+        console.log("paciente alterado com sucesso!");
         readline.keyInPause();
         break;
       case 5:
         matriculaBusca = readline.questionInt(
-          "Matricula do aluno que deseja alterar: "
+          "Matricula do paciente que deseja alterar: "
         );
-        for (const a of alunos) {
+        for (const a of listaPacientes) {
           if (a.matricula === matriculaBusca) {
             console.log(a.nome);
-            console.log(`Excluido aluno ${a.nome} do sistema..."`);
-            alunos.splice(a, 1);
+            console.log(`Excluido paciente ${a.nome} do sistema..."`);
+            listaPacientes.splice(a, 1);
           }
         }
-        console.log("Aluno excluído com sucesso!");
+        console.log("paciente excluído com sucesso!");
         readline.keyInPause();
         break;
       case 0:
