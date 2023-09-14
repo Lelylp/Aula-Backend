@@ -4,6 +4,7 @@ import readline from 'readline-sync';
 // let paciente1 = new Pessoa();
 let listaPacientes = [];
 let loop = true;
+//3 case pra baixo
 
 while (loop) {
     console.clear();
@@ -29,9 +30,10 @@ while (loop) {
         break;
       case 2:
         let nome = readline.question("Digite o nome do paciente:");
-        let pergunta = readline.question("Tem nome social ? ");
+        let pergunta = readline.question("Tem nome social ?(s/n) ");
+        let nomeS;
         if (pergunta == "S" || pergunta == "s") {
-           let nomeS = readline.question("Digite seu nome: ");
+            nomeS = readline.question("Digite seu nome: ");
         }
         let nomeMae = readline.question("Digite o nome da mãe:");
         let cpf = readline.question("Digite o cpf:");
@@ -41,7 +43,11 @@ while (loop) {
         let sexo =readline.question("Digite o sexo:");
         let cep =readline.question("Digite o cep:");
         let email =readline.question("Digite o email:");
-        paciente = new Pessoa(nome, "null", cpf, nomeMae, tel, dataNasc, etnia, sexo, cep, email);
+        if (pergunta == "S" || pergunta == "s") {
+            paciente = new Pessoa(nome, nomeS, cpf, nomeMae, tel, dataNasc, etnia, sexo, cep, email);
+        }else{
+            paciente = new Pessoa(nome, "null", cpf, nomeMae, tel, dataNasc, etnia, sexo, cep, email);
+        }
         listaPacientes.push(paciente);
         console.log("Paciente cadastrado com sucesso!");
         readline.keyInPause();
