@@ -1,18 +1,7 @@
 import Pessoa from "./Pessoa.js";
 import readline from 'readline-sync';
-
-const ETNIA = {
-  AMARELA: "Amarela",
-  BRANCA: "Branca",
-  PRETA: "Preta",
-  PARDA: "Parda",
-  INDIGENA: "Indigena",
-}
-const SEXO = {
-  MASCULINO: "Masculino",
-  FEMININO: "Feminino",
-  OUTROS: "Outros"
-}
+import { ETNIA } from "./enums.js";
+import { SEXO } from "./enums.js";
 
 let paciente0 = new Pessoa('Weslley', 84368224521, 'Mae', '81 9 85493221', '19/01/2001', ETNIA.BRANCA, SEXO.MASCULINO, '5024755', 'weslley3443@bol.com');
 let paciente1 = new Pessoa('Vagner', 54353454376, 'Outra mae', '88 9 38459845', '15/12/2002', ETNIA.PARDA, SEXO.FEMININO, '5589655', 'algo@hotmail.com', "Rogerio do creo");
