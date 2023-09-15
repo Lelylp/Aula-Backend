@@ -1,6 +1,6 @@
 export default class Pessoa {
 
-    constructor(nome, nomeS = "Null", cpf, nomeMae, tel, dataNasc, etnia, sexo, cep, email) {
+    constructor(nome, cpf, nomeMae, tel, dataNasc, etnia, sexo, cep, email, nomeS = "Null") {
         this.nome = nome;
         this.nomeS = nomeS
         this.nomeMae = nomeMae;
