@@ -238,6 +238,8 @@ function buscar(listaPacientes) {
       console.log("Resultado da busca");
       console.log("------------------------");
       console.log(a);
+    }else{
+      console.log("Esse paciente nao existe");
     }
   }
 }
@@ -304,6 +306,8 @@ function alterar(listaPacientes) {
       }
       a.setCep(readline.question("Digite o cep:"));
       a.setEmail(readline.question("Digite o email:"));
+    }else{
+      console.log('Esse paciente nao existe');
     }
   }
 }
