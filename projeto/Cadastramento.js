@@ -106,8 +106,8 @@ function cadastrar(listaPacientes) {
 
   do {
     try {
-      cpf = readline.questionInt("Digite o cpf:");
-      if (isNaN(cpf)) {
+      cpf = readline.question("Digite o cpf:");
+      if (isNaN(Number(cpf))) {
         throw 'Letras não são permitidos'
       }
       if (cpf.length != 11) {
@@ -121,18 +121,21 @@ function cadastrar(listaPacientes) {
   do {
     try {
       let ddd = readline.question("Digite o ddd do telefone:");
-      let numero = readline.question("Digite o número do telefone:");
-      tel = ddd + " " + numero
-      if (isNaN(tel)) {
+      if (isNaN(ddd)) {
         throw 'Letras não são permitidos'
       }
+      let numero = readline.question("Digite o número do telefone:");
+      if (isNaN(numero)) {
+        throw 'Letras não são permitidos'
+      }
+      tel = ddd + " " + numero
       if (tel.length != 12) {
         throw 'Número incorreto'
       }
     } catch (e) {
       console.log(e + "\n");
     }
-  } while (isNaN(tel) || tel.length != 12);
+  } while (tel.length != 12);
 
   do {
     try {
@@ -149,8 +152,8 @@ function cadastrar(listaPacientes) {
     } catch (e) {
       console.log(e + "\n");
     }
-  } while (isNaN(dia) || isNaN(mes) || isNaN(ano) || tel.length != 10);
-  opcao = readline.questionInt("Digite a etnia\n1-Amarela\n2-Branca\n3-Preta\n4-Parda\n5-Indigena\n");
+  } while (dataNasc.length != 10);
+  let opcao = readline.questionInt("Digite a etnia\n1-Amarela\n2-Branca\n3-Preta\n4-Parda\n5-Indigena\n");
   etnia;
   switch (opcao) {
     case 1:
@@ -201,14 +204,15 @@ function cadastrar(listaPacientes) {
 
   do {
     try {
-      cep = readline.questionInt("Digite o cep:");
-      if (cep.length != 8) {
+      cep = readline.question("Digite o cep(xxxxx-xxx):");
+
+      if (cep.length != 9) {
         throw 'Tamanho incorreto'
       }
     } catch (e) {
       console.log(e + "\n");
     }
-  } while (cep.length != 8);
+  } while (cep.length != 9);
   email = readline.question("Digite o email:");
   let paciente;
   if (pergunta == "S" || pergunta == "s") {
