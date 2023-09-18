@@ -1,14 +1,21 @@
-import Pessoa from "./Pessoa.js";
-import readline from 'readline-sync';
-import { ETNIA } from "./enums.js";
-import { SEXO } from "./enums.js";
+//importaçoes
+import Pessoa from "./Pessoa.js";//class
+import readline from 'readline-sync';//modulo
+import { ETNIA } from "./enums.js";//enum etnia
+import { SEXO } from "./enums.js";//enum sexo
 
+//criando variaveis da class pessoa
 let paciente0 = new Pessoa('Weslley', 84368224521, 'Mae', '81 985493221', '19/01/2001', ETNIA.BRANCA, SEXO.MASCULINO, '50247-55', 'weslley3443@bol.com');
 let paciente1 = new Pessoa('Vagner', 54353454376, 'Outra mae', '88 938459845', '15/12/2002', ETNIA.PARDA, SEXO.FEMININO, '55896-55', 'algo@hotmail.com', "Rogerio do creo");
 
+//lista de pacientes
 let listaPacientes = [];
+
+//alimentando a lista
 listaPacientes.push(paciente0);
 listaPacientes.push(paciente1);
+
+//variavel para deixar rodando em loop o menu
 let loop = true;
 
 
@@ -24,6 +31,7 @@ while (loop) {
   console.log("5 - Remover o paciente");
   console.log("==========================");
   let opcao = readline.questionInt("Escolha uma opcao: ");
+  //switch para as opcoes
   switch (opcao) {
     case 1:
       console.log("Listando todos os pacientes");
@@ -61,6 +69,7 @@ while (loop) {
   }
 }
 
+//faz um console.log de todos os objetos da lista
 function listar(listaPacientes) {
   let count = 0;
   for (const p of listaPacientes) {
@@ -68,6 +77,7 @@ function listar(listaPacientes) {
     console.log(p);
   }
 }
+//cadastra um novo objeto para a lista
 function cadastrar(listaPacientes) {
   let nome, nomeS, nomeMae, cpf, tel, dataNasc, etnia, sexo, cep, email
   do {
@@ -222,6 +232,8 @@ function cadastrar(listaPacientes) {
   }
   listaPacientes.push(paciente);
 }
+
+//busca um objeto especifico da lista
 function buscar(listaPacientes) {
   let cpfBusca = readline.questionInt(
     "Cpf do paciente que deseja buscar: "
@@ -236,6 +248,8 @@ function buscar(listaPacientes) {
     }
   }
 }
+
+//altera um objeto da lista
 function alterar(listaPacientes) {
   let cpfBusca = readline.questionInt(
     "Cpf do paciente que deseja alterar: "
@@ -304,6 +318,8 @@ function alterar(listaPacientes) {
     }
   }
 }
+
+//remove 1 paciente da lista
 function remover(listaPacientes) {
   let cpfBusca = readline.questionInt(
     "Cpf do paciente que deseja excluir: "

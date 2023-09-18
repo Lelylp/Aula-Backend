@@ -75,3 +75,4 @@ export default class Pessoa {
         this.email = email;
     }
 }
+//criou uma class chamada pessoa e seus metodos de inserir valor e retornar o valor

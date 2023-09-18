@@ -10,3 +10,5 @@ export const SEXO = {
     FEMININO: "Feminino",
     OUTROS: "Outros"
   }
+
+  // criando constantes que sao os enumeradores 
