@@ -152,7 +152,7 @@ function cadastrar(listaPacientes) {
       let dia = readline.question("Digite o dia que nasceu:");
       let mes = readline.question("Digite o mes que nasceu:");
       let ano = readline.question("Digite o ano que nasceu:");
-      dataNasc = dia + '/' +mes + '/' +ano;
+      dataNasc = dia + '/' + mes + '/' + ano;
       if (isNaN(dia) || isNaN(mes) || isNaN(ano)) {
         throw 'Letras não são permitidos'
       }
@@ -243,7 +243,7 @@ function buscar(listaPacientes) {
       console.log("Resultado da busca");
       console.log("------------------------");
       console.log(a);
-    }else{
+    } else {
       console.log("Esse paciente nao existe");
     }
   }
@@ -255,55 +255,58 @@ function alterar(listaPacientes) {
     "Cpf do paciente que deseja alterar: "
   );
   for (const a of listaPacientes) {
-    if (a.cpf === cpfBusca) {
-      a.setNome(readline.question("Digite o nome do paciente:"));
-      pergunta = readline.question("Tem nome social ?(s/n) ");
+    if (a.cpf == cpfBusca) {
+      a.setNome = readline.question("Digite o nome do paciente:");
+      let pergunta = readline.question("Tem nome social ?(s/n) ");
       if (pergunta == "S" || pergunta == "s") {
-        a.setNomeS(readline.question("Digite seu nome social: "));
+        a.setNomeS = readline.question("Digite seu nome social: ");
       }
-      a.setNomeMae(readline.question("Digite o nome da mãe:"));
-      a.setCpf(readline.questionInt("Digite o cpf:"));
-      a.setTel(readline.question("Digite o telefone:"));
-      a.setDataNasc(readline.question("Digite a data de nascimento:"));
+      if (pergunta == "N" || pergunta == "n") {
+        a.setNomeS = "Null";
+      }
+      a.setNomeMae = readline.question("Digite o nome da mãe:");
+      a.setCpf = readline.questionInt("Digite o cpf:");
+      a.setTel = readline.question("Digite o telefone:");
+      a.setDataNasc = readline.question("Digite a data de nascimento:");
       let opcao = readline.questionInt("Digite a etnia\n1-Amarela\n2-Branca\n3-Preta\n4-Parda\n5-Indigena\n");
       switch (opcao) {
         case 1:
-          a.setEtnia(ETNIA.AMARELA);
+          a.setEtnia = ETNIA.AMARELA;
           break;
 
         case 2:
-          a.setEtnia(ETNIA.BRANCA);
+          a.setEtnia = ETNIA.BRANCA;
           break;
 
         case 3:
-          a.setEtnia(ETNIA.PRETA);
+          a.setEtnia = ETNIA.PRETA;
           break;
 
         case 4:
-          a.setEtnia(ETNIA.PARDA);
+          a.setEtnia = ETNIA.PARDA;
           break;
 
         case 5:
-          a.setEtnia(ETNIA.INDIGENA);
+          a.setEtnia = ETNIA.INDIGENA;
           break;
 
         default:
           console.log("Valor errado");
-          a.setEtnia("Undefined");
+          a.setEtnia = "Undefined";
           break;
       }
       opcao = readline.questionInt("Digite o sexo\n1-Masculino\n2-Femenino\n3-Outros\n");
       switch (opcao) {
         case 1:
-          a.setSexo(SEXO.MASCULINO)
+          a.setSexo = SEXO.MASCULINO;
           break;
 
         case 2:
-          a.setSexo(SEXO.FEMININO)
+          a.setSexo = SEXO.FEMININO;
           break;
 
         case 3:
-          a.setSexo(SEXO.OUTROS)
+          a.setSexo = SEXO.OUTROS;
           break;
 
         default:
@@ -311,10 +314,8 @@ function alterar(listaPacientes) {
           a.setSexo("Undefined");
           break;
       }
-      a.setCep(readline.question("Digite o cep:"));
-      a.setEmail(readline.question("Digite o email:"));
-    }else{
-      console.log('Esse paciente nao existe');
+      a.setCep = readline.question("Digite o cep:");
+      a.setEmail = readline.question("Digite o email:");
     }
   }
 }
