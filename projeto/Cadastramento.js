@@ -51,7 +51,6 @@ while (loop) {
       break;
     case 4:
       alterar(listaPacientes);
-      console.log("paciente alterado com sucesso!");
       readline.keyInPause();
       break;
     case 5:
@@ -239,14 +238,14 @@ function buscar(listaPacientes) {
     "Cpf do paciente que deseja buscar: "
   );
   for (const a of listaPacientes) {
-    if (a.cpf === cpfBusca) {
+    if (a.cpf == cpfBusca) {
       console.log("Resultado da busca");
       console.log("------------------------");
       console.log(a);
-    } else {
-      console.log("Esse paciente nao existe");
+      return;
     }
   }
+  console.log("Paciente não existe");
 }
 
 //altera um objeto da lista
@@ -316,8 +315,11 @@ function alterar(listaPacientes) {
       }
       a.setCep = readline.question("Digite o cep:");
       a.setEmail = readline.question("Digite o email:");
+      console.log("paciente alterado com sucesso!");
+      return;
     }
   }
+  console.log("Paciente não existe");
 }
 
 //remove 1 paciente da lista
