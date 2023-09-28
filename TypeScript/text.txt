@@ -1,0 +1,3 @@
+npm install typescript, npm install ts-node e npm install tsc.
+
+npm install typescript -g para funcionar o tsc .ts
