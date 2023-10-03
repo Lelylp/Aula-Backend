@@ -1,3 +1,5 @@
-let nome: string = "Weslley";
+function nomeFuncao():void{
+    console.log("Minha primeira função");
+}
 
-console.log(nome);
+nomeFuncao();
